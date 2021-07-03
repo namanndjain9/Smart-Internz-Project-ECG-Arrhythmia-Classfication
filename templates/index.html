@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Arrhythmia Prediction</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<style>
+body{
+    background-color: #efc9af
+    
+}
+#demobox{
+    background-color: #1f8ac0 ;
+    border:  black;
+    width: 300px;
+    height: 215px;
+    margin:auto;
+    font-family: garamond;
+    box-shadow: 5px 10px #888888;
+    
+}
+input{
+    font-family:garamond;
+    color:#efc9af;
+    background-color:#1f8ac0;
+}
+h1{
+    padding-top: 10px;
+}
+p{
+    color:#1f8ac0;
+
+}
+
+</style>
+<!-- partial:index.partial.html -->
+
+<div id ="demobox" style="margin-top: 250px" >
+<h1 style="text-align:center" style="justify-content:center">ECG Arrythmia Prediction </h1>
+
+    <!-- Main Input For Receiving Query to our ML -->
+    
+   <form style="text-align:center" style="justify-content:center" action="/success" method="post" enctype="multipart/form-data">
+ 
+     <input type="file" name="fileToUpload" id="fileToUpload" accept="image/*" >
+
+    <br></br>
+
+   <input type = "submit"  value="Submit" >  
+    
+    </form>
+    </div>
+   <br>
+   <br>
+   <p style="text-align:center" style="justify-content:center">{{ prediction_text }}</p>
+
+
+<!-- partial -->
+  
+
+</body>
+</html>
